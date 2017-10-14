@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chanta.translator.bottomNavigation.ItemLanguageFragment">
+
+
+    <Button
+        android:id="@+id/left_button_language"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorPrimary"
+
+        android:text="@string/text_button_left_language"
+
+        android:textAlignment="center"
+
+        android:textColor="@color/white"
+
+        android:textSize="@dimen/about_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/right_button_language"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/right_button_language"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_button_right_language"
+        android:textAlignment="center"
+        android:textSize="@dimen/about_text_size"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/left_button_language"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginTop="50dp"
+
+        app:layout_constraintHorizontal_weight="1"
+
+        app:layout_constraintLeft_toRightOf="@+id/left_button_language"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+
+        <EditText
+            android:id="@+id/edit_text_language"
+            android:background="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_search"
+            android:textSize="@dimen/app_name_text_size"
+            app:layout_constraintTop_toBottomOf="@+id/left_button_language"
+            app:layout_constraintBottom_toBottomOf="@+id/scrollViewLanguage"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintHorizontal_weight="1"
+            android:paddingTop="0dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:shadowColor="@color/colorPrimary"
+            android:shadowDx="20"
+            android:shadowDy="20"
+            android:imeOptions="actionSend"
+            android:maxLines="1"
+            />
+
+    <ScrollView
+        android:id="@+id/scrollViewLanguage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_language"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_weight="1">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/ConstraintLayoutLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center|center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@color/white_trans"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="30dp">
+
+            <ImageView
+                android:id="@+id/imageParrot"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+
+                android:contentDescription="@string/parrot"
+                android:foregroundGravity="right"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/text_name_foreign"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.3"
+                app:layout_constraintVertical_weight="1"
+                app:srcCompat="@drawable/parrot" />
+
+            <TextView
+                android:id="@+id/text_name_foreign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/name_foreign"
+
+                android:textAlignment="center"
+
+                app:layout_constraintBottom_toTopOf="@+id/text_transcription"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageParrot" />
+
+            <TextView
+                android:id="@+id/text_transcription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/transcription"
+                android:textAlignment="center"
+
+                app:layout_constraintBottom_toTopOf="@+id/text_translation"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_name_foreign" />
+
+            <TextView
+                android:id="@+id/text_translation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/parrot"
+                android:textAlignment="center"
+
+                app:layout_constraintBottom_toTopOf="@+id/floatingActionButton_favorite"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_transcription" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingActionButton_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_translation"
+                app:srcCompat="@mipmap/ic_favorite" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
