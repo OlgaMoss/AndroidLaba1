@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -17,13 +16,9 @@
         android:layout_marginBottom="8dp"
         android:layout_marginTop="50dp"
         android:background="@color/colorPrimary"
-
         android:text="@string/text_button_left_language"
-
         android:textAlignment="center"
-
         android:textColor="@color/white"
-
         android:textSize="@dimen/about_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_weight="1"
@@ -43,11 +38,8 @@
         android:background="@color/colorPrimary"
         android:layout_below="@+id/left_button_language"
         android:layout_alignParentEnd="true"
-
         android:layout_marginTop="50dp"
-
         app:layout_constraintHorizontal_weight="1"
-
         app:layout_constraintLeft_toRightOf="@+id/left_button_language"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -56,31 +48,29 @@
         app:layout_constraintVertical_bias="0.0" />
 
 
-
-        <EditText
-            android:id="@+id/edit_text_language"
-            android:background="@color/white"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/text_search"
-            android:textSize="@dimen/app_name_text_size"
-            app:layout_constraintTop_toBottomOf="@+id/left_button_language"
-            app:layout_constraintBottom_toBottomOf="@+id/scrollViewLanguage"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintHorizontal_weight="1"
-            android:paddingTop="0dp"
-            android:paddingBottom="8dp"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:shadowColor="@color/colorPrimary"
-            android:shadowDx="20"
-            android:shadowDy="20"
-            android:imeOptions="actionSend"
-            android:maxLines="1"
-            />
+    <EditText
+        android:id="@+id/edit_text_language"
+        android:background="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/text_search"
+        android:textSize="@dimen/app_name_text_size"
+        app:layout_constraintTop_toBottomOf="@+id/left_button_language"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollViewLanguage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_weight="1"
+        android:paddingTop="0dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:shadowColor="@color/colorPrimary"
+        android:shadowDx="20"
+        android:shadowDy="20"
+        android:imeOptions="actionSend"
+        android:maxLines="1" />
 
     <ScrollView
         android:id="@+id/scrollViewLanguage"

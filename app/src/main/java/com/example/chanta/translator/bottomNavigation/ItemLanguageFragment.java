@@ -3,25 +3,20 @@ package com.example.chanta.translator.bottomNavigation;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
-import android.widget.Button;
 import android.widget.Toast;
-import android.support.v7.widget.AppCompatButton;
-import android.support.design.widget.FloatingActionButton;
-
 
 import com.example.chanta.translator.R;
 
@@ -55,12 +50,12 @@ public class ItemLanguageFragment extends Fragment {
         editText.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View viewForKey, int keyCode, KeyEvent keyEvent) {
-                if((keyEvent.getAction() == KeyEvent.ACTION_DOWN)
-                        && (keyCode == KeyEvent.KEYCODE_ENTER)){
+                if ((keyEvent.getAction() == KeyEvent.ACTION_DOWN)
+                        && (keyCode == KeyEvent.KEYCODE_ENTER)) {
                     ScrollView scrollView = (ScrollView) view.findViewById(R.id.scrollViewLanguage);
                     scrollView.setVisibility(View.VISIBLE);
                     InputMethodManager manager = (InputMethodManager) getActivity().getSystemService(Activity.INPUT_METHOD_SERVICE);
-                    manager.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(),0);
+                    manager.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
 //                    Toast.makeText(getContext(), editText.getText(), Toast.LENGTH_LONG).show();
                     return true;
                 }
@@ -69,7 +64,7 @@ public class ItemLanguageFragment extends Fragment {
         });
 
         buttonLeft = (Button) view.findViewById(R.id.left_button_language);
-        buttonLeft.setOnClickListener( new View.OnClickListener(){
+        buttonLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showDialog(view, R.id.left_button_language);
@@ -77,7 +72,7 @@ public class ItemLanguageFragment extends Fragment {
         });
 
         buttonLeft = (Button) view.findViewById(R.id.right_button_language);
-        buttonLeft.setOnClickListener( new View.OnClickListener(){
+        buttonLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showDialog(view, R.id.right_button_language);
@@ -112,7 +107,6 @@ public class ItemLanguageFragment extends Fragment {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
-
 
 
 //

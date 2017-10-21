@@ -1,11 +1,6 @@
 package com.example.chanta.translator;
 
 import android.app.ListActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
 
 /**
  * Created by chanta on 13.10.17.

@@ -3,16 +3,13 @@
     <item
         android:id="@+id/action_language"
         android:icon="@mipmap/ic_language"
-        android:title="@string/item_language"
-        />
+        android:title="@string/item_language" />
     <item
         android:id="@+id/action_history"
         android:icon="@mipmap/ic_history"
-        android:title="@string/item_history"
-        />
+        android:title="@string/item_history" />
     <item
         android:id="@+id/action_setting"
         android:icon="@mipmap/ic_setting"
-        android:title="@string/item_settings"
-        />
+        android:title="@string/item_settings" />
 </menu>

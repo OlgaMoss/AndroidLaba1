@@ -1,21 +1,246 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.chanta.translator.bottomNavigation.ItemSettingFragment">
-
-    <ImageView
-        android:id="@+id/setting_image"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_centerInParent="true"
-        android:src="@mipmap/ic_setting_select"/>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.chanta.translator.bottomNavigation.ItemSettingFragment"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:showDividers="middle">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textViewCommon"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/setting_image"
-        android:layout_centerHorizontal="true"/>
+        android:text="@string/common"
+        android:layout_marginTop="50dp"
+        android:textSize="@dimen/app_text_size"
 
-</RelativeLayout>
+        app:layout_constraintBottom_toTopOf="@+id/commonGroup"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/commonGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textViewText"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCommon"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Switch
+            android:id="@+id/switchCommon1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:text="@string/textCommon1"
+            android:textOff="@string/switch_off"
+            android:textOn="@string/switch_on"
+            android:layout_margin="@dimen/margin"
+
+            app:layout_constraintBottom_toTopOf="@+id/switchCommon2"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Switch
+            android:id="@+id/switchCommon2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:text="@string/textCommon2"
+            android:textOff="@string/switch_off"
+            android:textOn="@string/switch_on"
+            android:layout_margin="@dimen/margin"
+
+            app:layout_constraintBottom_toTopOf="@+id/textViewCommonName"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchCommon1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textViewCommonName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/textCommon3"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/margin"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchCommon2"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <!--Текст-->
+    <TextView
+        android:id="@+id/textViewText"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="@string/text"
+        android:textSize="@dimen/app_text_size"
+
+        app:layout_constraintBottom_toTopOf="@+id/textGroup"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commonGroup"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/textGroup"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDate"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewText"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/ColorTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/textColor"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/margin"
+
+            app:layout_constraintBottom_toTopOf="@+id/textViewSize"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/color_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/color_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:layout_margin="@dimen/margin"
+
+            app:layout_constraintBottom_toTopOf="@+id/spinner_size"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/textViewSize"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/textSize"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/margin"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/spinner_size"
+            app:layout_constraintTop_toBottomOf="@+id/ColorTextView" />
+
+        <Spinner
+            android:id="@+id/spinner_size"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:entries="@array/settings_size"
+            android:layout_margin="@dimen/margin"
+            android:textAlignment="center"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/color_button" />
+
+    </android.support.constraint.ConstraintLayout>
+
+ <!--Дата-->
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="@string/choice_date"
+        android:textSize="@dimen/app_text_size"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/dateGroup"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textGroup"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/dateGroup"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDate"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textViewDateOn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/margin"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/textViewChoiceDate"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textViewChoiceDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            android:gravity="end"
+            android:onClick="onChooseDate"
+            android:text="@string/choice"
+            android:textAlignment="center"
+            android:layout_margin="@dimen/margin"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/textViewDateOn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -9,17 +9,17 @@
     tools:context="com.example.chanta.translator.bottomNavigation.ItemHistoryFragment">
 
     <!--<ImageView-->
-        <!--android:id="@+id/history_image"-->
-        <!--android:layout_width="300dp"-->
-        <!--android:layout_height="300dp"-->
-        <!--android:layout_centerInParent="true"-->
-        <!--android:src="@mipmap/ic_history_select"/>-->
+    <!--android:id="@+id/history_image"-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="300dp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:src="@mipmap/ic_history_select"/>-->
 
     <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_below="@id/history_image"-->
-        <!--android:layout_centerHorizontal="true"/>-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/history_image"-->
+    <!--android:layout_centerHorizontal="true"/>-->
 
     <SearchView
         android:id="@+id/search_view"
@@ -35,27 +35,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
 
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="150dp"
+
+
         android:gravity="top"
 
         android:hint="@string/text_search"
         android:textSize="@dimen/app_name_text_size"
         android:paddingBottom="10dp"
         android:imeOptions="actionSend"
-        android:maxLines="1"
-        />
+        android:maxLines="1" />
+
+    <!--COMMENT TEST-->
 
     <ListView
         android:id="@+id/list_translate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="top"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="80dp"
 
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search_view"
-        app:layout_constraintVertical_bias="0.0"/>
+        app:layout_constraintVertical_bias="0.0" />
 </android.support.constraint.ConstraintLayout>

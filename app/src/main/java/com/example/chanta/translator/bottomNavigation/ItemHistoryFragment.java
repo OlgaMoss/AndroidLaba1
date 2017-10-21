@@ -10,15 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ListView;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Collections;
 
 import com.example.chanta.translator.R;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Created by chanta on 07.10.17.
@@ -27,7 +25,7 @@ import com.example.chanta.translator.R;
 public class ItemHistoryFragment extends Fragment {
     private ListView listView;
     private ArrayAdapter<String> adapter;
-//    private List<String> values = new ArrayList<String>();
+    //    private List<String> values = new ArrayList<String>();
     private List<String> liste;
 
     public static ItemHistoryFragment newInstance() {
@@ -47,11 +45,11 @@ public class ItemHistoryFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_item_history, container, false);
 
         listView = (ListView) view.findViewById(R.id.list_translate);
-        String[] values =  getResources().getStringArray(R.array.list_translate);
+        String[] values = getResources().getStringArray(R.array.list_translate);
         liste = new ArrayList<String>();
         Collections.addAll(liste, values);
 
-         adapter = new ArrayAdapter<String>(getActivity().getBaseContext(),
+        adapter = new ArrayAdapter<String>(getActivity().getBaseContext(),
                 R.layout.list_for_translate, R.id.txt, liste);
 
         listView.setAdapter(adapter);
@@ -59,7 +57,7 @@ public class ItemHistoryFragment extends Fragment {
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
-                                          int pos, long id) {
+                                           int pos, long id) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 final int positionToRemove = pos;
                 builder.setTitle(R.string.choice_delete)
@@ -78,9 +76,9 @@ public class ItemHistoryFragment extends Fragment {
 
                 AlertDialog dialog = builder.create();
                 dialog.show();
-                        return true;
-                    }
-                });
+                return true;
+            }
+        });
 
 
 //                new View.OnLongClickListener(){
@@ -129,8 +127,6 @@ public class ItemHistoryFragment extends Fragment {
 //
 //            }
 //        });
-
-
 
 
         return view;

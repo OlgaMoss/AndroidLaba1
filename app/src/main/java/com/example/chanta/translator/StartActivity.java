@@ -1,8 +1,8 @@
 package com.example.chanta.translator;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -20,20 +20,20 @@ public class StartActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_start);
 
-    Thread timerThread = new Thread(){
-        public void run(){
-            try{
-                sleep(3000);
-            }catch(InterruptedException e){
-                e.printStackTrace();
-            }finally{
-                Intent intent = new Intent(StartActivity.this,StandartActivity.class);
-                startActivity(intent);
+        Thread timerThread = new Thread() {
+            public void run() {
+                try {
+                    sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    Intent intent = new Intent(StartActivity.this, StandartActivity.class);
+                    startActivity(intent);
+                }
             }
-        }
-    };
+        };
         timerThread.start();
-}
+    }
 
     @Override
     protected void onPause() {

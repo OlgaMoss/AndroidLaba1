@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:background="@color/white_trans"
     android:longClickable="true">
@@ -16,7 +15,7 @@
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:src="@android:drawable/btn_star_big_off"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 
     <TextView
         android:id="@+id/txt"
@@ -25,8 +24,7 @@
         android:textSize="@dimen/app_name_text_size"
         android:layout_gravity="center_vertical"
         android:text="@+id/txt"
-        android:layout_weight="4"
-        />
+        android:layout_weight="4" />
 
     <ImageView
         android:id="@+id/delete"
@@ -36,6 +34,6 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:src="@android:drawable/ic_menu_delete"/>
+        android:src="@android:drawable/ic_menu_delete" />
 
 </LinearLayout>

@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -14,7 +14,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.example.chanta.translator.bottomNavigation.ItemHistoryFragment;
 import com.example.chanta.translator.bottomNavigation.ItemLanguageFragment;
@@ -127,22 +126,22 @@ public class StandartActivity extends AppCompatActivity
         return true;
     }
 
-    public void goToAboutActivity(MenuItem menuItem){
+    public void goToAboutActivity(MenuItem menuItem) {
         Intent intent = new Intent(this, AboutActivity.class);
         startActivity(intent);
     }
 
-    public void goToLanguageActivity(MenuItem menuItem){
+    public void goToLanguageActivity(MenuItem menuItem) {
         Intent intent = new Intent(this, ItemLanguageFragment.class);
         startActivity(intent);
     }
 
-    public void goToHistoryActivity(MenuItem menuItem){
+    public void goToHistoryActivity(MenuItem menuItem) {
         Intent intent = new Intent(this, ItemHistoryFragment.class);
         startActivity(intent);
     }
 
-    public void goToSettingActivity(MenuItem menuItem){
+    public void goToSettingActivity(MenuItem menuItem) {
         Intent intent = new Intent(this, ItemSettingFragment.class);
         startActivity(intent);
     }
