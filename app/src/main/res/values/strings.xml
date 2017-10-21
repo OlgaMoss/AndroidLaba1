@@ -73,12 +73,14 @@
     <string name="common">Общее</string>
     <string name="textCommon1">Определить язык</string>
     <string name="textCommon2">Быстрый перевод</string>
-    <string name="textCommon3">Имя при привествии</string>
+    <string name="textCommon3">Имя переводчика</string>
+    <string name="name">Оля</string>
+    <string name="choice_name">Напишите имя</string>
 
     <string name="switch_on">Да</string>
     <string name="switch_off">Нет</string>
 
-    <string name="text">Настройки текста</string>
+    <string name="text">Параметры текста</string>
     <string name="textColor">Цвет текста</string>
     <string name="textSize">Размер текста</string>
 
@@ -93,6 +95,9 @@
     <string name="choice_date">Выбор даты</string>
     <string name="date">Дата</string>
     <string name="choice">Выбрать</string>
+
+    <string name="my_choose_date">Выберите дату</string>
+    <string name="ready">Готово</string>
 
     <string name="add">Добавлено в избранные</string>
 
