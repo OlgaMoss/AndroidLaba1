@@ -5,18 +5,15 @@
         <item
             android:id="@+id/nav_language"
             android:icon="@drawable/ic_menu_language"
-            android:title="@string/item_language"
-            android:onClick="goToLanguageActivity" />
+            android:title="@string/item_language" />
         <item
             android:id="@+id/nav_history"
             android:icon="@drawable/ic_menu_history"
-            android:title="@string/item_history"
-            android:onClick="goToHistoryActivity" />
+            android:title="@string/item_history" />
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_menu_settings"
-            android:title="@string/item_settings"
-            android:onClick="goToSettingActivity" />
+            android:title="@string/item_settings" />
 
     </group>
 

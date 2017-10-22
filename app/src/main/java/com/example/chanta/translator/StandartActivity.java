@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -93,9 +94,12 @@ public class StandartActivity extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            fragmentTransaction.replace(R.id.frame_layout, new ItemSettingFragment()).commit();
             return true;
         }
 
@@ -107,14 +111,16 @@ public class StandartActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-//        if (id == R.id.nav_language) {
-//            // Handle the camera action
-//        } else if (id == R.id.nav_history) {
-//
-//        } else if (id == R.id.nav_settings) {
-//
-//        }
+        if (id == R.id.nav_language) {
+            fragmentTransaction.replace(R.id.frame_layout, new ItemLanguageFragment()).commit();
+        } else if (id == R.id.nav_history) {
+            fragmentTransaction.replace(R.id.frame_layout, new ItemHistoryFragment()).commit();
+        } else if (id == R.id.nav_settings) {
+            fragmentTransaction.replace(R.id.frame_layout, new ItemSettingFragment()).commit();
+        }
 //// else if (id == R.id.nav_about) {
 ////        }
 //        else if (id == R.id.nav_exit) {
@@ -128,21 +134,6 @@ public class StandartActivity extends AppCompatActivity
 
     public void goToAboutActivity(MenuItem menuItem) {
         Intent intent = new Intent(this, AboutActivity.class);
-        startActivity(intent);
-    }
-
-    public void goToLanguageActivity(MenuItem menuItem) {
-        Intent intent = new Intent(this, ItemLanguageFragment.class);
-        startActivity(intent);
-    }
-
-    public void goToHistoryActivity(MenuItem menuItem) {
-        Intent intent = new Intent(this, ItemHistoryFragment.class);
-        startActivity(intent);
-    }
-
-    public void goToSettingActivity(MenuItem menuItem) {
-        Intent intent = new Intent(this, ItemSettingFragment.class);
         startActivity(intent);
     }
 
