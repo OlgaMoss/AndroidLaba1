@@ -10,12 +10,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 
 import com.example.chanta.translator.DatePicker;
 import com.example.chanta.translator.R;
+import com.flask.colorpicker.ColorPickerView;
+import com.flask.colorpicker.OnColorSelectedListener;
+import com.flask.colorpicker.builder.ColorPickerClickListener;
+import com.flask.colorpicker.builder.ColorPickerDialogBuilder;
 
 /**
  * Created by chanta on 07.10.17.
@@ -23,6 +26,7 @@ import com.example.chanta.translator.R;
 
 public class ItemSettingFragment extends Fragment {
     private TextView textView;
+    private Button button;
 
     public static ItemSettingFragment newInstance() {
         ItemSettingFragment fragment = new ItemSettingFragment();
@@ -59,13 +63,13 @@ public class ItemSettingFragment extends Fragment {
                 builder.setView(promptsView);
                 final TextView textView1 = (TextView) promptsView.findViewById(R.id.input_text);
                 builder.setTitle(R.string.choice_name)
-                        .setPositiveButton(R.string.choice_delete_ok,
+                        .setPositiveButton(R.string.choice_ok,
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog,int id) {
                                         textView.setText(textView1.getText());
                                     }
                                 })
-                        .setNegativeButton(R.string.choice_delete_cansel,
+                        .setNegativeButton(R.string.choice_cansel,
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog,int id) {
                                         dialog.cancel();
@@ -78,6 +82,36 @@ public class ItemSettingFragment extends Fragment {
             }
         });
 
+        button = (Button) view.findViewById(R.id.color_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ColorPickerDialogBuilder
+                        .with(getActivity())
+                        .setTitle(R.string.my_choose_color)
+                        .initialColor(((ColorDrawable)button.getBackground()).getColor())
+                        .wheelType(ColorPickerView.WHEEL_TYPE.FLOWER)
+                        .density(12)
+                        .setOnColorSelectedListener(new OnColorSelectedListener() {
+                            @Override
+                            public void onColorSelected(int selectedColor) {
+                            }
+                        })
+                        .setPositiveButton(R.string.choice_ok, new ColorPickerClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int selectedColor, Integer[] allColors) {
+                               button.setBackgroundColor(selectedColor);
+                            }
+                        })
+                        .setNegativeButton(R.string.choice_cansel, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                            }
+                        })
+                        .build()
+                        .show();
+            }
+            });
         return view;
     }
 

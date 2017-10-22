@@ -26,8 +26,8 @@
 
     <string name="choice_delete">Удаление</string>
     <string name="choice_delete_text">Вы действительно хотите удалить запись?</string>
-    <string name="choice_delete_ok">Да</string>
-    <string name="choice_delete_cansel">Отмена</string>
+    <string name="choice_ok">Да</string>
+    <string name="choice_cansel">Отмена</string>
 
     <string-array name="list_button_languages_entries">
         <item>Русский</item>
@@ -95,6 +95,8 @@
     <string name="choice_date">Выбор даты</string>
     <string name="date">Дата</string>
     <string name="choice">Выбрать</string>
+
+    <string name="my_choose_color">Выберите цвет</string>
 
     <string name="my_choose_date">Выберите дату</string>
     <string name="ready">Готово</string>

@@ -62,13 +62,13 @@ public class ItemHistoryFragment extends Fragment {
                 final int positionToRemove = pos;
                 builder.setTitle(R.string.choice_delete)
                         .setMessage(R.string.choice_delete_text)
-                        .setPositiveButton(R.string.choice_delete_ok, new DialogInterface.OnClickListener() {
+                        .setPositiveButton(R.string.choice_ok, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 liste.remove(positionToRemove);
                                 adapter.notifyDataSetChanged();
                             }
                         })
-                        .setNegativeButton(R.string.choice_delete_cansel, new DialogInterface.OnClickListener() {
+                        .setNegativeButton(R.string.choice_cansel, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.cancel();
                             }
