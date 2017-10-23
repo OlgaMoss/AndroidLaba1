@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
@@ -28,8 +29,8 @@ import com.example.chanta.translator.R;
 
 public class ItemLanguageFragment extends Fragment {
     private EditText editText;
-    private Button buttonLeft;
-    private Button buttonRight;
+    private Button button;
+    private ImageView imageView;
 
     public static ItemLanguageFragment newInstance() {
         ItemLanguageFragment fragment = new ItemLanguageFragment();
@@ -48,6 +49,9 @@ public class ItemLanguageFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_item_language, container, false);
 
+        imageView = (ImageView) view.findViewById(R.id.imageParrot);
+        imageView.setImageResource(R.mipmap.flying_parrot);
+
         editText = (EditText) view.findViewById(R.id.edit_text_language);
         editText.setOnKeyListener(new View.OnKeyListener() {
             @Override
@@ -65,16 +69,16 @@ public class ItemLanguageFragment extends Fragment {
             }
         });
 
-        buttonLeft = (Button) view.findViewById(R.id.left_button_language);
-        buttonLeft.setOnClickListener(new View.OnClickListener() {
+        button = (Button) view.findViewById(R.id.left_button_language);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showDialog(view, R.id.left_button_language);
             }
         });
 
-        buttonLeft = (Button) view.findViewById(R.id.right_button_language);
-        buttonLeft.setOnClickListener(new View.OnClickListener() {
+        button = (Button) view.findViewById(R.id.right_button_language);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showDialog(view, R.id.right_button_language);
