@@ -50,24 +50,23 @@
 
     <EditText
         android:id="@+id/edit_text_language"
-        android:background="@color/white"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/border"
         android:hint="@string/text_search"
+        android:imeOptions="actionSend"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:textSize="@dimen/app_name_text_size"
-        app:layout_constraintTop_toBottomOf="@+id/left_button_language"
+        android:gravity="center_vertical"
         app:layout_constraintBottom_toBottomOf="@+id/scrollViewLanguage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintHorizontal_weight="1"
-        android:paddingTop="0dp"
-        android:paddingBottom="8dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:imeOptions="actionSend"
-        android:maxLines="1" />
+        app:layout_constraintTop_toBottomOf="@+id/left_button_language"
+        app:layout_constraintVertical_bias="0.0" />
 
 
     <!--android:shadowColor="@color/colorPrimary"-->

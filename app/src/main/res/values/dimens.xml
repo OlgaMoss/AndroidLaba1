@@ -14,4 +14,9 @@
     <dimen name="about_bottom_text_size">10sp</dimen>
 
 
+    <dimen name="img_list_translate">70sp</dimen>
+
+
+
+
 </resources>

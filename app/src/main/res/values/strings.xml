@@ -45,28 +45,28 @@
     <string-array name="list_translate">
         <item>Попугай - Parrot</item>
         <item>Птица - Bird</item>
-        <item>Попугай - Parrot</item>
-        <item>Птица - Bird</item>
-        <item>Попугай - Parrot</item>
-        <item>Птица - Bird</item>
-        <item>Попугай - Parrot</item>
-        <item>Птица - Bird</item>
-        <item>Попугай - Parrot</item>
-        <item>Птица - Bird</item>
-        <item>Попугай - Parrot</item>
-        <item>Птица - Bird</item>
-        <item>Попугай - Parrot</item>
-        <item>Птица - Bird</item>
-        <item>Попугай - Parrot</item>
-        <item>Птица - Bird</item>
-        <item>Попугай - Parrot</item>
-        <item>Птица - Bird</item>
-        <item>Попугай - Parrot</item>
-        <item>Птица - Bird</item>
-        <item>Попугай - Parrot</item>
-        <item>Птица - Bird</item>
-        <item>Попугай - Parrot</item>
-        <item>Птица - Bird</item>
+        <item>Лента - Tape</item>
+        <item>Ножницы - Scissors</item>
+        <item>Прогулка - Stroll</item>
+        <item>Пара - Couple</item>
+        <item>Сосед - Neighbour</item>
+        <item>Рука  - Arm</item>
+        <item>Одеяло - Blanket</item>
+        <item>Рёв - Roar</item>
+        <item>Грохот - Rumbling</item>
+        <item>Край - Edge</item>
+        <item>Впадина - Hollow</item>
+        <item>Чувство - Sense</item>
+        <item>Хлопок - Pop</item>
+        <item>Иностранец - Alien</item>
+        <item>Дюжина - Dozen</item>
+        <item>Удар - Kick</item>
+        <item>Тишина - Silence</item>
+        <item>Марка - Stamp</item>
+        <item>Кран - Tap</item>
+        <item>Каша - Porridge</item>
+        <item>Барсук - Badger</item>
+        <item>Чернила - Ink</item>
 
     </string-array>
 
