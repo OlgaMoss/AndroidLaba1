@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.chanta.translator.bottomNavigation.ItemSettingFragment">
+
+
+    <ScrollView
+        android:id="@+id/scrollViewLanguage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:clipToPadding="false"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_weight="1">
+
+        <LinearLayout
+            android:id="@+id/common"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/scrollViewLanguage"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="@+id/scrollViewLanguage"
+            app:layout_constraintRight_toRightOf="@+id/scrollViewLanguage"
+            app:layout_constraintTop_toTopOf="@+id/scrollViewLanguage"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_weight="1">
+
+            <TextView
+                android:id="@+id/textViewCommon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_spec"
+                android:layout_marginTop="10dp"
+                android:text="@string/common"
+
+                android:textSize="@dimen/app_text_size"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/commonGroup"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@+id/common"
+                app:layout_constraintRight_toRightOf="@+id/common"
+                app:layout_constraintTop_toTopOf="@+id/common"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_weight="1" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/commonGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/textViewText"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@+id/common"
+                app:layout_constraintRight_toRightOf="@+id/common"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCommon"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_weight="1">
+
+                <Switch
+                    android:id="@+id/switchCommon1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin"
+                    android:checked="false"
+                    android:text="@string/textCommon1"
+                    android:textOff="@string/switch_off"
+                    android:textOn="@string/switch_on"
+
+                    app:layout_constraintBottom_toTopOf="@+id/switchCommon2"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_weight="1" />
+
+                <Switch
+                    android:id="@+id/switchCommon2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin"
+                    android:checked="false"
+                    android:text="@string/textCommon2"
+                    android:textOff="@string/switch_off"
+                    android:textOn="@string/switch_on"
+
+                    app:layout_constraintBottom_toTopOf="@+id/textViewCommonName"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/switchCommon1"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/textViewCommonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin"
+                    android:text="@string/textCommon3"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_weight="3"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/textViewName"
+                    app:layout_constraintTop_toBottomOf="@+id/switchCommon2"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/textViewName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="@dimen/margin"
+                    android:clickable="true"
+                    android:gravity="end"
+
+                    android:text="@string/name"
+                    android:textAlignment="center"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toRightOf="@+id/textViewCommonName"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/switchCommon2"
+                    app:layout_constraintVertical_bias="0.72"
+                    app:layout_constraintVertical_weight="1" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_spec"
+                android:layout_marginTop="@dimen/margin_spec"
+                android:text="@string/text"
+                android:textSize="@dimen/app_text_size"
+
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/textGroup"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/commonGroup"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_weight="1" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/textGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/textViewDate"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewText"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_weight="1">
+
+                <TextView
+                    android:id="@+id/ColorTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/margin"
+                    android:text="@string/textColor"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toTopOf="@+id/textViewSize"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/color_button"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_weight="1" />
+
+                <Button
+                    android:id="@+id/color_button"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="@dimen/margin"
+                    android:background="@color/colorAccent"
+
+                    app:layout_constraintBottom_toTopOf="@+id/spinner_size"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/textViewSize"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin"
+                    android:text="@string/textSize"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_weight="2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/spinner_size"
+                    app:layout_constraintTop_toBottomOf="@+id/ColorTextView"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_weight="1" />
+
+                <Spinner
+                    android:id="@+id/spinner_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="@dimen/margin"
+                    android:entries="@array/settings_size"
+                    android:textAlignment="center"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/color_button"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_weight="1" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_spec"
+                android:layout_marginTop="@dimen/margin_spec"
+                android:text="@string/choice_date"
+                android:textSize="@dimen/app_text_size"
+
+                app:layout_constraintBottom_toTopOf="@+id/dateGroup"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textGroup"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_weight="1" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/dateGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDate"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_weight="1">
+
+                <TextView
+                    android:id="@+id/textViewDateOn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin"
+                    android:text="@string/date"
+                    android:textColor="@color/black"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_weight="2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/textViewChoiceDate"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_weight="1" />
+
+                <TextView
+                    android:id="@+id/textViewChoiceDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="@dimen/margin"
+                    android:clickable="true"
+                    android:gravity="end"
+                    android:text="@string/choice"
+                    android:textAlignment="center"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toRightOf="@+id/textViewDateOn"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_weight="1" />
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
