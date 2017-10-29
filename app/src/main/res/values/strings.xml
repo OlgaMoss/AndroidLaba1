@@ -16,7 +16,7 @@
 
     <string name="text_button_left_language">Русский</string>
     <string name="text_button_right_language">Английский</string>
-    <string name="text_search">Введите запрос</string>
+    <string name="text_search">Введите слово для перевода</string>
 
     <string name="parrot">Попугай</string>
     <string name="transcription">|pær∂t|</string>

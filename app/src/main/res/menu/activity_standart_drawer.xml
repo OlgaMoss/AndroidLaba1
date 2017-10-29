@@ -24,10 +24,7 @@
                 android:icon="@drawable/ic_menu_public"
                 android:onClick="goToAboutActivity"
                 android:title="@string/menu_about" />
-            <item
-                android:id="@+id/nav_exit"
-                android:icon="@drawable/ic_menu_exit"
-                android:title="@string/menu_exit" />
+
         </menu>
     </item>
 </menu>
